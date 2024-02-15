@@ -6,4 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
         square.classList.add('square');
         container.appendChild(square);
     }
+    const squares = document.querySelectorAll('.square');
+
+    squares.forEach(square => {
+        square.addEventListener('mouseenter', function() {
+            this.classList.add('hovered'); 
+        }); 
+        square.addEventListener('mouseleave', function() {
+            this.classList.add('hovered');
+        }); 
+    });
 });
