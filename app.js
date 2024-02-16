@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", baseGrid());
+
+function baseGrid() {
     const container = document.querySelector("#container");
 
     for (i = 0; i < 16 * 16; ++i) {
@@ -16,4 +18,4 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('hovered');
         }); 
     });
-});
+}
