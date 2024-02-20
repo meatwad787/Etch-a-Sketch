@@ -1,20 +1,14 @@
-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 426px;/* Adjust width as needed */
-    /* height: 400px; */
+
+.row {
+   display: flex;
    
 }
+
 .square {
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(219, 16, 16);
 }
 
 .hovered {
