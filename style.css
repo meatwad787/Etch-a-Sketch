@@ -20,3 +20,8 @@ body {
 .hovered {
     background-color: black;
 }
+
+.btn {
+    width: 40px;
+    height: 40px;
+}
