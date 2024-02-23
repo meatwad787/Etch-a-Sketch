@@ -19,6 +19,16 @@ h1 {
     font-size: 50px;
 }
 
+.btn {
+    width: 125px;
+    height: 60px;
+    border: transparent;
+    background-color: royalblue;
+    color: #f2ecec;
+    font-size: 25px;
+    border-radius: 21px;
+}
+
 .container {
     display: flex;
     background-color:cornsilk;
@@ -27,12 +37,6 @@ h1 {
     margin-top: 25px;
 }
 
- /* .row {
-   /* display: flex;
-   width: 400px;
-    height: 400px;  
-   
-}  */ 
 
 .square {
     border: 1px solid black;
@@ -43,12 +47,6 @@ h1 {
     background-color: black;
 }
 
-.btn {
-    width: 125px;
-    height: 60px;
-    border: transparent;
-    background-color: royalblue;
-    color: #f2ecec;
-    font-size: 25px;
-    border-radius: 21px;
+p {
+    color: royalblue;
 }
