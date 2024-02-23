@@ -8,31 +8,45 @@ body {
     flex-direction: column; */
 }
 
+.style-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+h1 {
+    color: royalblue;
+    font-size: 50px;
+}
+
+.btn {
+    width: 125px;
+    height: 60px;
+    border: transparent;
+    background-color: royalblue;
+    color: #f2ecec;
+    font-size: 25px;
+    border-radius: 21px;
+}
+
 .container {
     display: flex;
     background-color:cornsilk;
-    margin: 100px auto;
     flex-wrap: wrap;
     box-shadow: 10px 10px royalblue;
+    margin-top: 25px;
 }
 
- /* .row {
-   /* display: flex;
-   width: 400px;
-    height: 400px;  
-   
-}  */ 
 
 .square {
-    border: 1px solid rgb(255 255 255);
-    background-color: cornflowerblue;
+    border: 1px solid black;
+    color: #f2ecec;
 } 
 
 .hovered {
     background-color: black;
 }
 
-.btn {
-    width: 40px;
-    height: 40px;
+p {
+    color: royalblue;
 }
