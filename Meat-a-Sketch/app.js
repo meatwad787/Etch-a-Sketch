@@ -2,6 +2,8 @@
 const gridSide = 600;
 let rows = 16;
 let cols = 16;
+const Draw = document.querySelector('.draw');
+const Erase = document.querySelector('.erase');
 
 const container = document.querySelector('#container');
 container.style.width = `${gridSide}px`;
@@ -17,27 +19,40 @@ function baseGrid() {
         container.appendChild(square);
     }
 
-    const squares = document.querySelectorAll('.square');
-        squares.forEach(square => {
-        square.addEventListener('mouseenter', function() {
-            this.classList.add('hovered'); 
+    Draw.addEventListener('click', function draw() {
+        Draw.classList.add('btn-hover');
+        Erase.classList.remove('btn-hover');
+    
+        const squares = document.querySelectorAll('.square');
+            squares.forEach(square => {
+            square.addEventListener('click', function() {
+                this.classList.add('hovered'); 
+            });  
+            Erase.addEventListener('click', function() {
+                Erase.classList.add('btn-hover')
+                Draw.classList.remove('btn-hover');
+               
+                
+                while (Erase.click = true) {
+                     square.addEventListener('click', () => square.classList.remove('hovered'));
+                    break;
+                 } 
         }); 
-        square.addEventListener('mouseleave', function() {
-            this.classList.add('hovered');
-        }); 
-        });
-
+    });
+});
 
 } baseGrid();
 
-const btn = document.querySelector('.btn');
+const ResizeBtn = document.querySelector('.btn');
 
 function newGrid() {
     
-    btn.addEventListener('click', function() {
+    ResizeBtn.addEventListener('click', function() {
         
         container.innerHTML = "";
         createGrid();
+        
+        
     });
 }; newGrid();
 
@@ -69,15 +84,15 @@ function createGrid() {
         square.classList.add('square');
         container.appendChild(square);
     };
-       const squares = document.querySelectorAll('.square');
-        squares.forEach(newSquare => {
-        newSquare.addEventListener('mouseenter', function() {
-            this.classList.add('hovered'); 
-        }); 
-        newSquare.addEventListener('mouseleave', function() {
-            this.classList.add('hovered');
-        }); 
-        });
+    //    const squares = document.querySelectorAll('.square');
+    //     squares.forEach(newSquare => {
+    //     newSquare.addEventListener('mouseenter', function() {
+    //         this.classList.add('hovered'); 
+    //     }); 
+    //     newSquare.addEventListener('mouseleave', function() {
+    //         this.classList.add('hovered');
+    //     }); 
+    //     });
     };
 
 
