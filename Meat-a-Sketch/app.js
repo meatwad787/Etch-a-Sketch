@@ -4,6 +4,10 @@ let rows = 16;
 let cols = 16;
 const Draw = document.querySelector('.draw');
 const Erase = document.querySelector('.erase');
+const ColorPicker = document.querySelector('.grid-color');
+const clear = document.querySelector('.clear-btn');
+
+
 
 const container = document.querySelector('#container');
 container.style.width = `${gridSide}px`;
@@ -17,6 +21,7 @@ function baseGrid() {
         square.style.height = `${(gridSide / rows) -2}px`;
         square.classList.add('square');
         container.appendChild(square);
+        clear.addEventListener('click', () => square.classList.remove('hovered'));
     }
 
     Draw.addEventListener('click', function draw() {
@@ -83,6 +88,7 @@ function createGrid() {
         square.style.height = `${(gridSide / rows) -2}px`;
         square.classList.add('square');
         container.appendChild(square);
+        clear.addEventListener('click', () => square.classList.remove('hovered'));
     };
     //    const squares = document.querySelectorAll('.square');
     //     squares.forEach(newSquare => {
