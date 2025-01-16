@@ -21,9 +21,10 @@ function baseGrid() {
         square.style.height = `${(gridSide / rows) -2}px`;
         square.classList.add('square');
         container.appendChild(square);
-        clear.addEventListener('click', () => square.classList.remove('hovered'));
+        // clear.addEventListener('click', () => square.classList.remove('hovered'));
+        clear.addEventListener('click', () => square.style.backgroundColor = '');
     }
-
+        //This just removes the hover from Erase button when Draw is clicked
     Draw.addEventListener('click', function draw() {
         Draw.classList.add('btn-hover');
         Erase.classList.remove('btn-hover');
@@ -31,15 +32,21 @@ function baseGrid() {
         const squares = document.querySelectorAll('.square');
             squares.forEach(square => {
             square.addEventListener('click', function() {
-                this.classList.add('hovered'); 
+                // this.classList.add('hovered'); 
+                this.style.backgroundColor = 
+                document.getElementById('clr').value; 
             });  
+            //This just removes the hover from Draw button when Erase is clicked
             Erase.addEventListener('click', function() {
                 Erase.classList.add('btn-hover')
                 Draw.classList.remove('btn-hover');
                
                 
                 while (Erase.click = true) {
-                     square.addEventListener('click', () => square.classList.remove('hovered'));
+                    //  square.addEventListener('click', () => square.classList.remove('hovered'));
+            //Now the Erase button does it's job when Draw button has
+            //the value of the color picker
+                    square.addEventListener('click', () => square.style.backgroundColor = '');
                     break;
                  } 
         }); 
@@ -88,7 +95,8 @@ function createGrid() {
         square.style.height = `${(gridSide / rows) -2}px`;
         square.classList.add('square');
         container.appendChild(square);
-        clear.addEventListener('click', () => square.classList.remove('hovered'));
+        // clear.addEventListener('click', () => square.classList.remove('hovered'));
+        clear.addEventListener('click', () => square.style.backgroundColor = '');
     };
     //    const squares = document.querySelectorAll('.square');
     //     squares.forEach(newSquare => {
