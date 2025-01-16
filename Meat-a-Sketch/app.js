@@ -57,10 +57,11 @@ function baseGrid() {
 
 const ResizeBtn = document.querySelector('.btn');
 
+
 function newGrid() {
     
     ResizeBtn.addEventListener('click', function() {
-        
+ 
         container.innerHTML = "";
         createGrid();
         
@@ -87,6 +88,8 @@ function createGrid() {
     container.style.width = `${gridSide}px`;
     container.style.height = `${gridSide}px`;
     container.classList.add('container');
+    //This stops hovering the Draw button after making a new grid
+    Draw.classList.remove('btn-hover');
 
     for (let i = 0; i < (rows * cols); ++i) {
         const square = document.createElement('div');
