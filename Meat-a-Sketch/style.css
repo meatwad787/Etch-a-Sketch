@@ -1,5 +1,5 @@
 body {
-    background-color: #d3e9fc;
+    background-color: #dedede;
     /* display: flex; */
     /* flex-direction: column; */
     /* margin: 0; */
@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    color: royalblue;
+    color: rgb(0, 0, 0);
     font-size: 50px;
 }
 
@@ -28,16 +28,18 @@ h1 {
     width: 4.8rem;
     height: 3rem;
     border: transparent;
-    background-color: royalblue;
-    color: #f2ecec;
+    background-color: #d7d6d6;;
+    color: #000000;
     font-size: 25px;
+    box-shadow: 5px 5px rgb(0, 0, 0);
+    border-radius: 3px;
 } 
 .btn:hover {
-    background-color: rgb(0, 64, 255);
+    background-color: rgb(142, 142, 142);
 }
 
 .btn-hover {
-    background-color: rgb(0, 64, 255);
+    background-color: rgb(142, 142, 142);
 }
 
 .container {
@@ -46,6 +48,7 @@ h1 {
     flex-wrap: wrap;
     box-shadow: 10px 10px rgb(0, 0, 0);
     margin-top: 25px;
+    border-radius: 9px;
 }
 
 
@@ -62,5 +65,5 @@ h1 {
 }
 
 p {
-    color: royalblue;
+    color: rgb(0, 0, 0);
 }
