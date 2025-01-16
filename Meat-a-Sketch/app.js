@@ -6,6 +6,7 @@ const Draw = document.querySelector('.draw');
 const Erase = document.querySelector('.erase');
 const ColorPicker = document.querySelector('.grid-color');
 const clear = document.querySelector('.clear-btn');
+const Remove = document.querySelector('.remove-border');
 
 
 
@@ -22,6 +23,8 @@ function baseGrid() {
         square.classList.add('square');
         container.appendChild(square);
         // clear.addEventListener('click', () => square.classList.remove('hovered'));
+        //Now the Clear button does it's job when Draw button has
+        //the value of the color picker
         clear.addEventListener('click', () => square.style.backgroundColor = '');
     }
         //This just removes the hover from Erase button when Draw is clicked
@@ -55,7 +58,7 @@ function baseGrid() {
 
 } baseGrid();
 
-const ResizeBtn = document.querySelector('.btn');
+const ResizeBtn = document.querySelector('.Resize-Btn');
 
 
 function newGrid() {
