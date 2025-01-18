@@ -26,6 +26,18 @@ function baseGrid() {
         //Now the Clear button does it's job when Draw button has
         //the value of the color picker
         clear.addEventListener('click', () => square.style.backgroundColor = '');
+        // Remove.addEventListener('click', () => {
+        //     if (square.classList.contains("square")) {
+        //             square.classList.replace("square", "square-two");
+        //           } else {
+        //             square.classList.replace("square-two", "square");
+        //           } 
+            
+        //     Draw.classList.remove('btn-hover');
+        //     Erase.classList.remove('btn-hover'); 
+            
+            
+        // });
     }
         //This just removes the hover from Erase button when Draw is clicked
     Draw.addEventListener('click', function draw() {
@@ -40,7 +52,7 @@ function baseGrid() {
                 document.getElementById('clr').value; 
             });  
             //This just removes the hover from Draw button when Erase is clicked
-            Erase.addEventListener('click', function() {
+            Erase.addEventListener('click', function erase() {
                 Erase.classList.add('btn-hover')
                 Draw.classList.remove('btn-hover');
                
@@ -91,8 +103,9 @@ function createGrid() {
     container.style.width = `${gridSide}px`;
     container.style.height = `${gridSide}px`;
     container.classList.add('container');
-    //This stops hovering the Draw button after making a new grid
+    //These stop hovering the buttons after making a new grid
     Draw.classList.remove('btn-hover');
+    Erase.classList.remove('btn-hover');
 
     for (let i = 0; i < (rows * cols); ++i) {
         const square = document.createElement('div');
@@ -103,16 +116,18 @@ function createGrid() {
         container.appendChild(square);
         // clear.addEventListener('click', () => square.classList.remove('hovered'));
         clear.addEventListener('click', () => square.style.backgroundColor = '');
+
+        // Remove.addEventListener('click', () => {
+        //     if (square.classList.contains("square")) {
+        //             square.classList.replace("square", "square-two");
+        //           } else {
+        //             square.classList.replace("square-two", "square");
+        //           } 
+            
+        //     Draw.classList.remove('btn-hover');
+        //     Erase.classList.remove('btn-hover');      
+        // });
     };
-    //    const squares = document.querySelectorAll('.square');
-    //     squares.forEach(newSquare => {
-    //     newSquare.addEventListener('mouseenter', function() {
-    //         this.classList.add('hovered'); 
-    //     }); 
-    //     newSquare.addEventListener('mouseleave', function() {
-    //         this.classList.add('hovered');
-    //     }); 
-    //     });
     };
 
 
